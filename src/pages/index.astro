@@ -1,21 +1,14 @@
 ---
-import PlotFigure from "../components/PlotFigure.astro";
 import Layout from "../layouts/Layout.astro";
+import PlotFigure from "../components/PlotFigure.astro";
 import * as Plot from "@observablehq/plot";
-import penguins from "../assets/penguins.json";
+const delta = (d: any) => d.temp_max - d.temp_min;
 ---
 
-<Layout>
-  <h1 class="text-2xl">Test Astro et Plot (Observablehq)</h1>
-  <PlotFigure
-    options={{
-      marks: [
-        Plot.dot(penguins, {
-          x: "culmen_length_mm",
-          y: "culmen_depth_mm",
-          stroke: "species",
-        }),
-      ],
-    }}
-  />
+<Layout class="bg-gray-50 min-h-screen py-12 px-6 md:px-12">
+  <h1
+    class="text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-12 select-none"
+  >
+    TP N°2
+  </h1>
 </Layout>
